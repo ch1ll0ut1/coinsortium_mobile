@@ -1,0 +1,12 @@
+ <widget id="com.example.hello" version="0.0.1">
+    <name>Coinsortium</name>
+    <description>
+        Coinsortium Mobile App Prototype
+    </description>
+    <author email="st3ve.knoch@gmail.com" href="https://coinsortium.co">
+       Coinsortium
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <icon src="img/favicon.ico" />
+</widget>
