@@ -1,0 +1,96 @@
+<html>
+<head>
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/main.css">
+
+	<script src="css/source-sans-pro.js"></script>
+</head>
+<body>
+
+	<script id="tpl_login" type="text/x-handlebars-template">
+		<div class='header'>
+			<h1>Login</h1>
+		</div>
+		
+		<br />
+
+		<input type="text" id="login_name">
+		<input type="password" id="login_pwd">
+
+		<button class="action_login">login</button>
+	</script>
+
+	<script id="tpl_securities" type="text/x-handlebars-template">
+		<div class='header'>
+	    	<a href='#' class="button header-button header-button-left">Logout</a>
+			<h1>Securities</h1>
+		</div>
+
+		<br />
+
+	    <div class="scroll">
+	    	<ul class='security_list'>
+			    {{#.}}
+			    <li><a href="#security/{{this.id}}">{{this.ticker}}<br/>Bid: {{this.bid}} Ask: {{this.ask}}</a></li>
+			    {{/.}}
+	    	</ul>
+	    </div>
+	</script>
+
+	<script id="tpl_security" type="text/x-handlebars-template">
+	    <div class='header'>
+	    	<a href='#securities' class="button header-button header-button-left">Back</a>
+	    	<h1>Security</h1>
+	    </div>
+	    <div class='details'>
+	        <h1>{{name}} - {{ticker}}</h1>
+	        <h2>Introduction</h2>
+	        <p>
+	        	{{description}}
+	        </p>
+
+			<table>
+				<tr>
+					<td>Name</td>
+					<td>{{name}}</td>
+				</tr>
+				<tr>
+					<td>Ticker</td>
+					<td>{{ticker}}</td>
+				</tr>
+				<tr>
+					<td>Listing Date</td>
+					<td>{{listing_date}}</td>
+				</tr>
+				<tr>
+					<td>Total Shares Issued</td>
+					<td>{{total_shares_issued}}</td>
+				</tr>
+				<tr>
+					<td>Dividends To Date (in BTC)</td>
+					<td>{{dividends}}</td>
+				</tr>
+				<tr>
+					<td>Owner</td>
+					<td>{{owner}}</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+				</tr>
+			</table>
+	    </div>
+	</script>
+
+	<script src="lib/jquery-1.8.2.min.js"></script>
+	<script src="lib/handlebars.js"></script>
+	<script src="phonegap.js"></script>
+
+	<script src="js/view/Login.js"></script>
+	<script src="js/view/Securities.js"></script>
+	<script src="js/view/Security.js"></script>
+	
+	<script src="js/main.js"></script>
+
+</body>
+</html>
