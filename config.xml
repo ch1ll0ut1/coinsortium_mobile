@@ -8,5 +8,5 @@
     </author>
     <content src="index.html" />
     <access origin="*" />
-    <icon src="img/favicon.ico" />
+    <icon src="img/favicon.png" />
 </widget>
